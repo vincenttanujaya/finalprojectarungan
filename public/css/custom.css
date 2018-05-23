@@ -1,0 +1,41 @@
+
+.btn.btn-outline-primary{
+	border-color: #4232b8;
+	color: #4232b8;
+}
+
+.btn.btn-outline-primary:hover{
+	border-color: #efefef;
+	color: #efefef;
+	background-color: #4232b8;
+	box-shadow: none;
+}
+
+.btn.btn-outline-primary:active{
+	border-color: #efefef;
+	color: #efefef;
+	background-color: #4232b8;
+	box-shadow: none;
+}
+
+.btn.btn-outline-primary:focus{
+	border-color: #efefef;
+	color: #efefef;
+	background-color: #4232b8;
+	box-shadow: none;
+}
+
+.form-control{
+	width: 450px;
+}
+
+.btn.btn-primary.btn-lg{
+	width: 95px;
+	background-color: #3d2db2;
+	font-size: 20px;
+}
+
+.btn.btn-primary.btn-lg:hover{
+	background-color: #3d2db2;
+	opacity: 0.8;
+}

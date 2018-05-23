@@ -1,0 +1,153 @@
+body {
+    background-color: #1f1f1f;
+    background-image: linear-gradient();
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.jumbotron.jumbotron-fluid{
+  background-color: #ffffff;
+}
+
+#tabkiri {
+  margin-right: 0px;
+}
+
+#tabkanan {
+  margin-left: 0;
+}
+
+.nav-tabs{
+  border: none;
+}
+
+#btdaftar{
+  width: 250px;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+#imgdef{
+  height: 90%;
+  position: absolute;
+  bottom: 0px;
+}
+
+#definisi{
+  text-align: center;
+}
+
+#atas {
+  height: 600px;
+}
+
+#aboutus{
+  position: relative;
+  background-color: #ffffff;
+  height: 640px;
+}
+
+.col{
+  margin: 10px;
+  color: #efefef;
+  font-weight: bold;
+}
+
+#tentangkami{
+  font-weight: bold;
+  font-size: 20px;
+  color: #efefef;
+}
+
+#apa {
+  margin-top: 10px;
+}
+
+#logiin{
+  font-weight: bold;
+  font-size: 20px;
+  color: #efefef;
+  text-decoration: none;
+}
+
+#logiin:hover{
+  text-decoration: none;
+}
+
+
+#login {
+  text-align: right;
+}
+
+.nav-link{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.logo {
+  position: fixed;
+  z-index: -1;
+  top: 30px;
+  width: 40%;
+  left: 30%;
+}
+
+#logobesar2{
+  animation-name: ilang;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ilang {
+  0%    {opacity: 0;}
+  50%   {opacity: 0.5;}
+  100% {opacity: 0;}
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
