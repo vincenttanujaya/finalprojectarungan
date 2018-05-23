@@ -25,8 +25,8 @@
 	box-shadow: none;
 }
 
-.form-control{
-	width: 450px;
+.form-control.mx-auto{
+	width: 430px;
 }
 
 .btn.btn-primary.btn-lg{
@@ -38,4 +38,12 @@
 .btn.btn-primary.btn-lg:hover{
 	background-color: #3d2db2;
 	opacity: 0.8;
+}
+
+.nav-link{
+	font-size: 18px;
+}
+
+#filter-button{
+	background-color: #4232b8;
 }
