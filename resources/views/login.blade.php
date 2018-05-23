@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="text-center">
-  		<img src="img/logoarungan.png" class="rounded" alt="logo" width="400px">
+  		<img src="img/logoarungan.png" class="rounded" alt="logo" width="27%">
 	</div>
 	<div class="text-center">
 		<a href=""></a>
@@ -47,8 +47,100 @@
   </div>
 
   <div class="text-center">
-    <a href="#">Buat akun sekarang!</a>
+    <button type="button" id="btdaftar" class="btn btn-dark" data-toggle="modal" data-target="#formdaftar">
+    Buat akun sekarang!
+    </button>
   </div>
+
+  <div class="modal fade" id="formdaftar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Ayo Daftar</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <ul class="nav nav-tabs " role="tablist">
+              <li class="nav-item mx-1">
+                <a class="btn btn-primary" href="#mahasiswa" role="tab" data-toggle="tab">Mahasiswa</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary" href="#buzz" role="tab" data-toggle="tab">Penyedia</a>
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane" id="mahasiswa">
+                <form method="POST" action="registrasi">
+                  {{ csrf_field() }}
+                  <div class="form-group" id="apa">
+                    <input type="text" class="form-control" name="namadepanmhs" placeholder="Nama Depan">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="namabelakangmhs" placeholder="Nama Belakang">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" name="emailmahasiswa" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="hpmahasiswa" placeholder="No. HP">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="usernamemahasiswa" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" name="passwordmahasiswa" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <input type="date" class="form-control" name="tanggallahirmahasiswa" placeholder="Tanggal Lahir">
+                    <small>Tanggal Lahir</small>
+                  </div>
+                  <div class="form-group">
+                    <select class="form-control" name="iduniv">
+                      <option value="">Pilih univ kamu ...</option>
+                      @foreach($univ as $univ)
+                        <option value="{{$univ->id_universitas}}">{{$univ->nama_universitas}}</option>
+                      @endforeach
+                    </select>
+                  </div>
+                  <button type="submit" name="kirim" class="btn btn-primary">Register</button>
+                </form>
+
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="buzz">
+                <form method="POST" action="registrasipenyedia">
+                  {{ csrf_field() }}
+                  <div class="form-group" id="apa">
+                    <input type="text" class="form-control" name="namadepanp" placeholder="Nama Depan">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="namabelakangp" placeholder="Nama Belakang">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" name="emailp" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="hpp" placeholder="No. HP">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="usernamep" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" name="passwordp" placeholder="Password">
+                  </div>
+                  <button type="submit" name="kirimpenyedia" class="btn btn-primary">Register</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

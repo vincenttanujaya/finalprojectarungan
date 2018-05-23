@@ -16,7 +16,6 @@
 // });
 
 Route::get('/','HomeController@index');
-Route::get('/loginmhs', function () {
-    return view('login');
-});
+Route::get('/loginmhs', 'HomeController@loginpage');
 Route::post('registrasi','HomeController@store');
+Route::post('registrasipenyedia','HomeController@storep');

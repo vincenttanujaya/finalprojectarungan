@@ -106,7 +106,30 @@
                       </form>
 
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="buzz">bbb</div>
+                    <div role="tabpanel" class="tab-pane fade" id="buzz">
+                      <form method="POST" action="registrasipenyedia">
+                        {{ csrf_field() }}
+                        <div class="form-group" id="apa">
+                          <input type="text" class="form-control" name="namadepanp" placeholder="Nama Depan">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="namabelakangp" placeholder="Nama Belakang">
+                        </div>
+                        <div class="form-group">
+                          <input type="email" class="form-control" name="emailp" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="hpp" placeholder="No. HP">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="usernamep" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control" name="passwordp" placeholder="Password">
+                        </div>
+                        <button type="submit" name="kirimpenyedia" class="btn btn-primary">Register</button>
+                      </form>
+                    </div>
                   </div>
               </div>
             </div>

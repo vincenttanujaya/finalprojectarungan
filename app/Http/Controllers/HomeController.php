@@ -6,10 +6,15 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-  public function index(){
-    $univ = DB::table('universitas')->get();
-    return view('welcome', ['univ'=>$univ]);
-   }
+    public function index(){
+      $univ = DB::table('universitas')->get();
+      return view('welcome', ['univ'=>$univ]);
+    }
+
+    public function loginpage(){
+      $univ = DB::table('universitas')->get();
+      return view('login', ['univ'=>$univ]);
+    }
 
    public function store(Request $request)
      {
@@ -34,8 +39,22 @@ class HomeController extends Controller
           'ID_rank' => $idrank
         ]
        );
-
-       echo "1";
+       return view('login');
      }
+
+     public function storep(Request $request)
+       {
+         DB::table('penyedia')->insert(
+           ['nama_depan' => $_POST['namadepanp'],
+            'nama_belakang' =>$_POST['namabelakangp'],
+            'username' => $_POST['usernamep'],
+            'password' => $_POST['passwordp'],
+            'email' => $_POST['emailp'],
+            'no_hp' => $_POST['hpp']
+          ]
+         );
+          return view('login');
+       }
+
 
 }
